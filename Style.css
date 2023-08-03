@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+
+}
+.lock{
+    visibility: hidden;
+}
+.menu_list{
+    float: left;
+    display: flex;
+    flex-direction: row;
+    margin-top: 4.4rem;
+    margin-left: 3.4rem;
+    color: white;
+    position: relative;
+    transition: all .5s;
+    animation-name: lol;
+    animation-duration: .5s;
+   
+}
+.menu_list:nth-child(2){
+    margin-left: 4.3rem;
+}
+
+
+.arrow:hover{
+    border-bottom: 1px solid rgb(253, 253, 253);
+    cursor: pointer;
+
+}
+
+.main_cross{
+    position: absolute;
+    width: 1.3rem;
+    height: 1.3rem;
+    right: 3px;  
+    top: 3px;
+    background-color: white;
+    cursor: pointer;
+}
+.cross{
+    position: inherit;
+    top: 9px;
+    left: 3px;
+    width: 15px;
+    height: 3px;
+    background-color: black;
+    color: white;
+    border-radius: 4rem;
+    transform: rotate(45deg);
+   
+}
+.cross::after{
+    position: inherit;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 15px;
+    height: 3px;
+    background-color: black;
+    border-radius: 4rem;
+    transform: rotate(-90deg);
+}
+
+.main_cross:hover .cross::after{
+    content: "";
+    background-color: #ff3e54df;
+}
+.main_cross:hover .cross{
+    background-color: #ff3e54df;
+}
+
+#cross{
+    display: none;
+}
+#cross:checked~ .blue{
+    display: none;
+}
+
+
+.nested_list{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 1.8rem;
+    left: 1rem;
+    list-style: none;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 4px;
+    width: 9rem;
+    animation-duration: .5s;
+    animation-name: lol;
+}
+.arrow_img_2{
+    display: none;
+}
+
+.nested_list li{
+    margin-top: 10px;
+    cursor: pointer;
+}
+.nested_list li:hover{
+    color: #ff9071;
+}
+.parent_product:checked~ .product{
+   display: flex;
+}
+.parent_company:checked~ .company{
+    display: flex;
+}
+
+.parent_connect:checked~ .connect{
+    display: flex;
+}
+.arrow_img{
+    height: 7px;
+    width: 11px;
+    margin-top: .7rem;
+    padding-left: 2px;
+}
+.parent_product:checked~ .arrow_img{
+    transform: rotate(180deg);
+}
+.parent_company:checked~ .arrow_img{
+    transform: rotate(180deg);
+}
+.parent_connect:checked~ .arrow_img{
+    transform: rotate(180deg);
+}
+
+.first {
+    background: linear-gradient(70deg, #ff9071, #ff3e54df), url(/bg-pattern-intro-desktop.svg);
+    border-radius: 0 0 0 8rem;
+    background-repeat: no-repeat;
+    height: 75vh;
+    width: 100%;
+    background-position: center;
+    overflow: hidden;
+
+}
+.logo{
+    float: left;
+    padding-left: 8rem;
+    padding-top: 2rem;
+}
+#menu{
+    display: none;
+}
+
+
+
+
+
+
+.btns_main{
+    float: right;
+    padding-right: 1rem;
+    padding-top: 3rem;
+}
+.peer{
+    margin-right: 1rem;
+    border: none;
+    border-radius: 50px;
+    background: transparent;
+}
+.peer a{
+    letter-spacing: .08rem;
+}
+.login a{
+    text-decoration: none;
+    padding: .7rem 1.5rem;
+    color: white;
+    font-weight: 800;
+    border-radius: 50px;
+}
+.Sign_up a{
+    background-color: white;
+    color: #ff3e54df;
+    padding: .7rem 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 50px;
+}
+.first_content{
+    text-align: center;
+    margin-top: 12rem;
+}
+.main_heading{
+    font-size: 3rem;
+    color: white;
+}
+.main_p{
+    color: rgba(255, 255, 255, 0.754);
+    margin-top: 1rem;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+.buttons li{
+    list-style: none;
+    margin: 3rem 1rem;
+   
+}
+.buttons li a{
+    padding: .6rem 1.2rem;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 50px;
+    
+}
+.start a{
+    background-color: white;
+    color: #ff3e54df;
+    font-weight: 600;
+    
+   
+}
+.learn a{
+    color: white;
+}
+
+.second{
+    overflow: hidden;
+    width: 100%;
+
+
+}
+.second_heading{
+    /* position: absolute; */
+    text-align: center;
+    margin-top: 7rem;
+    font-size: 2rem;
+   
+}
+.second_content{
+    width: 40%;
+    float: left;
+    padding-top: 6.5rem;
+    padding-left: 6%;
+
+}
+.introduction h2{
+    margin-bottom: 1.5rem;
+}
+.introduction p{
+    margin-bottom: 3rem;
+    line-height: 1.5rem;
+}
+.robust h2{
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+.robust p{
+    line-height: 1.5rem;
+}
+.imgs_mobile{
+    display: none;
+}
+.imgs{
+    float: right;
+    width: 50%;
+}
+.image_1{
+   transform: translateY(-5rem);
+   max-height: 800px;
+}
+.third{
+    height: 25rem;
+    width: 100%;
+    background-color: rgb(58, 59, 89);
+    border-radius: 0px 70px 0px 70px;
+    position: relative;
+}
+.back_img{
+    overflow: hidden;
+    height: 23rem;
+}
+.circle{
+    transform: translate(-10rem, -30rem);
+    width: 63vw;
+   display: inline-block;
+  
+}
+.phone{
+    height: 45vw;
+    position: absolute;
+    top: 0;
+}
+
+.phone_img{
+    position: absolute;
+    top: -4.5rem;
+    left: 3rem;
+}
+.content_phone{
+    position: absolute;
+    top: 8rem;
+    right: 6rem;
+    max-width: 30rem;
+    color: white;
+}
+.content_phone h2{
+    margin-bottom: 1.5rem;
+}
+.content_phone p{
+    line-height: 1.5rem;
+    font-size: .9rem;
+    letter-spacing: .04rem;
+}
+.fourth{
+    height: 30rem;
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 15rem;
+}
+.laptop{
+    height: 55vw;
+    float: left;
+    transform: translate(-15.2rem);
+}
+.fourth_half_mobile{
+    display: none;
+}
+
+.fourth_half{
+    width: 50%;
+    float: left;
+    display: inline;
+}
+.fourth_content{
+    width: 50%;
+    float: right;
+    margin-top: 12rem;
+    
+}
+.fourth_sub_content{
+    max-width: 25rem;
+    margin-left: 3rem;
+}
+.fourth_sub_content h2{
+    margin-bottom: 1rem;
+}
+.fourth_sub_content p{
+    margin-bottom: 4rem;
+    line-height: 1.5rem;
+}
+.fifth{
+    height: 20rem;
+    width: 100%;
+    background-color: rgb(36, 36, 44);
+    border-top-right-radius: 100px;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 4rem;
+    color: white;
+}
+.bottom ul{
+    margin-top: 2rem;
+}
+.bottom ul li{
+    list-style: none;
+    margin-top: .7rem;
+    cursor: pointer;
+}
+
+.bottom_logo{
+    height: auto;
+    width: 10vw;
+    display: inline;
+}
+
+@keyframes lol {
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
